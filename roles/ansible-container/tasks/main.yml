@@ -1,0 +1,21 @@
+---
+- name: install pip
+  apt:
+    name: python-pip
+    state: latest
+- name: install latest pip
+  pip:
+    name: pip
+    state: latest
+- name: install docker
+  pip:
+    name: docker
+    state: latest
+- name: install setuptools
+  pip:
+    name: setuptools
+    state: latest
+- name: install ansible-container
+  pip: 
+    name: ansible-container[docker]
+    state: present
